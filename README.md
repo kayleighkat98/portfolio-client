@@ -1,7 +1,7 @@
 
 # My Portfolio Client 
 ## Link to the live project
-* VERCEL URL:    
+* VERCEL URL: https://kay-the-web-dev.vercel.app  
 * HEROKU URL: https://git.heroku.com/shielded-caverns-21991.git    
 ## Documentation of the API.
 ### ROUTES:
