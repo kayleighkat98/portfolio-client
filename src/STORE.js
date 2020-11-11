@@ -174,7 +174,6 @@ const Tech = [
         stack: 'front',
         projects: [1, 2]
     },
-
 //BACK
     {
         name: 'node',
@@ -191,7 +190,6 @@ const Tech = [
         stack: 'back',
         projects: [3]
     },
-
     {
         name: 'bcryptjs',
         stack: 'back',
@@ -262,7 +260,6 @@ const Tech = [
         stack: 'back',
         projects: [1, 2]
     },
-//DEV
     {
         name: 'chai',
         stack: 'back',
