@@ -1,0 +1,23 @@
+.header {
+  background-color: black;
+  color: white;
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+}
+
+.header div {
+  padding-left: 1.5vh;
+}
+
+.header-name {
+  font-size: 3vh;
+  padding-top: 3vh;
+}
+
+.header-posit {
+  font-size: 2vh;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+}
+/*# sourceMappingURL=header.css.map */

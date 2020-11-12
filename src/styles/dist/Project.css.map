@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,CAAC;EACA,MAAM,EAAE,eAAe;CAAG",
+    "sources": [
+        "../Project.sass"
+    ],
+    "names": [],
+    "file": "Project.css"
+}
