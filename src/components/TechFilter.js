@@ -5,11 +5,10 @@ class TechFilter extends Component {
     render() {
         return(
             <div className='tech-filter'>
+                <button key={'all'} onClick={e =>this.props.undoFilter()}>All</button>
                 {tech.map((item, i)=>{
-                    let techs = [<button key={'all'} onClick={e =>this.props.undoFilter()}>All</button>];
-                    techs.push(<button key={i} onClick={e =>this.props.setFilter(item.projects)}>{item.name}</button>)
-                    return (techs)
-               })}
+                    return (<button key={i} onClick={e =>this.props.setFilter(item.projects)}>{item.name}</button>)
+                })}
             </div>
         );
     };
