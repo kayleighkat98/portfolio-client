@@ -101,13 +101,13 @@ const Tech = [
         id: 4,
         name: 'Google Maps API',
         stack: 'front',
-        projects: [3]
+        projects: [1]
     },
     {
         id: 5,
         name: 'Google Places API',
         stack: 'front',
-        projects: [3]
+        projects: [1]
     },
     {
         id: 6,
