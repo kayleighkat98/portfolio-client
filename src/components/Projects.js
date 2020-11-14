@@ -6,15 +6,19 @@ class Projects extends Component {
     state = {
         filterValue: null
     }
-    filterFunction = (id) =>{
-        this.setState({filterValue: id});
+    setFilter = (value) =>{
+        this.setState({filterValue: value});
     }
+    undoFilter = () => {
+        this.setState({filterValue: null});
+    };
     render() {
         return(
             <div className='container'>
                 <h1>Projects</h1>
                 <TechFilter
-                    filterFunction = {this.filterFunction}
+                    setFilter = {this.setFilter}
+                    undoFilter = {this.undoFilter}
                 />
                 <Project
                     filterValue = {this.state.filterValue}

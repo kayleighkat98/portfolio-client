@@ -6,8 +6,8 @@ class TechFilter extends Component {
         return(
             <div className='tech-filter'>
                 {tech.map((item, i)=>{
-                    let techs = [];
-                    techs.push(<button key={i} onClick={e =>this.props.filterFunction(item.id)}>{item.name}</button>)
+                    let techs = [<button key={'all'} onClick={e =>this.props.undoFilter()}>All</button>];
+                    techs.push(<button key={i} onClick={e =>this.props.setFilter(item.projects)}>{item.name}</button>)
                     return (techs)
                })}
             </div>
