@@ -68,186 +68,155 @@ const Projects = [
                 The function is made to slowly work the user to the front of the line by removing the first person and a random pet every 5 seconds until the user is first, then with the same timeout add a random person to the end of the line until there is a total of 5 in line.
                 Though I am proud of the result I look forward to adding more features.
                 For example, I plan to display record of past adoptions as well as display a countdown when running the demo. `
-            
+                
+            },
+            links: {
+                prod_url: 'https://petful-client-peach.vercel.app/',
+                client_git: 'https://github.com/thinkful-ei-quail/DSA-Petful-Client-kay-tiff',
+                server_git: 'https://github.com/thinkful-ei-quail/DSA-Petful-Server-Tiff-Kayleigh'
+            }
         },
-        links: {
-            prod_url: 'https://petful-client-peach.vercel.app/',
-            client_git: 'https://github.com/thinkful-ei-quail/DSA-Petful-Client-kay-tiff',
-            server_git: 'https://github.com/thinkful-ei-quail/DSA-Petful-Server-Tiff-Kayleigh'
-        }
-    },
-];
-const Tech = [
-//FRONT
+    ];
+    const Tech = [
     {
-        id: 1,
-        name: 'React',
-        stack: 'front',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 2,
-        name: 'React Router',
-        stack: 'front',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 3,
-        name: 'Classnames',
-        stack: 'front',
-        projects: [1, 2]
-    },
-    {
-        id: 4,
-        name: 'Google Maps API',
-        stack: 'front',
-        projects: [1]
-    },
-    {
-        id: 5,
-        name: 'Google Places API',
-        stack: 'front',
-        projects: [1]
-    },
-    {
-        id: 6,
-        name: 'JWT Decode',
-        stack: 'front',
-        projects: [1, 2, 3]
-    },
-//DEV
-    {
-        id: 7,
-        name: 'Cross Env',
-        stack: 'front',
-        projects: [1, 2]
-    },
-//BACK
-    {   
-        id: 8,
-        name: 'Node',
-        stack: 'back',
-        projects: [1, 3]
-    },
-    {
-        id: 9,
-        name: 'NPM',
-        stack: 'back',
-        projects: [1]
-    },
-    {
-        id: 10,
-        name: 'Body Parser',
-        stack: 'back',
-        projects: [3]
-    },
-    {
-        id: 11,
         name: 'BcryptJS',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        id: 12,
-        name: 'CORS',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 13,
-        name: 'Dotenv',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 14,
-        name: 'Express',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 15,
-        name: 'Fetch',
-        stack: 'back',
-        projects: [1]
-    },
-    {
-        id: 16,
-        name: 'Helmet',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 17,
-        name: 'Jsonwebtoken',
-        stack: 'back',
-        projects: [1, 2]
-    },
-    {
-        id: 18,
-        name: 'Knex',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 19,
-        name: 'Morgan',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 20,
-        name: 'Pg',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 21,
-        name: 'UUID',
+        name: 'Body Parser',
         stack: 'back',
         projects: [3]
     },
     {
-        id: 22,
-        name: 'Winston',
-        stack: 'back',
-        projects: [3]
-    },
-    {
-        id: 23,
-        name: 'Postgrator CLI',
-        stack: 'back',
-        projects: [1, 2, 3]
-    },
-    {
-        id: 24,
-        name: 'XSS',
-        stack: 'back',
-        projects: [1, 2]
-    },
-    {
-        id: 25,
         name: 'Chai',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        id: 26,
+        name: 'Classnames',
+        stack: 'front',
+        projects: [1, 2]
+    },
+    {
+        name: 'CORS',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'Cross Env',
+        stack: 'front',
+        projects: [1, 2]
+    },
+    {
+        name: 'Dotenv',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'Express',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'Fetch',
+        stack: 'back',
+        projects: [1]
+    },
+    {
+        name: 'Google Maps API',
+        stack: 'front',
+        projects: [1]
+    },
+    {
+        name: 'Google Places API',
+        stack: 'front',
+        projects: [1]
+    },
+    {
+        name: 'Helmet',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'Jsonwebtoken',
+        stack: 'back',
+        projects: [1, 2]
+    },
+    {
+        name: 'JWT Decode',
+        stack: 'front',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'Knex',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {
         name: 'Mocha',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        id: 27,
+        name: 'Morgan',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {   
+        name: 'Node',
+        stack: 'back',
+        projects: [1, 3]
+    },
+    {
         name: 'Nodemon',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        id: 28,
+        name: 'NPM',
+        stack: 'back',
+        projects: [1]
+    },
+    {
+        name: 'Pg',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'Postgrator CLI',
+        stack: 'back',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'React',
+        stack: 'front',
+        projects: [1, 2, 3]
+    },
+    {
+        name: 'React Router',
+        stack: 'front',
+        projects: [1, 2, 3]
+    },
+    {
         name: 'Supertest',
         stack: 'back',
         projects: [1, 2, 3]
+    },
+    {
+        name: 'UUID',
+        stack: 'back',
+        projects: [3]
+    },
+    {
+        name: 'Winston',
+        stack: 'back',
+        projects: [3]
+    },
+    {
+        name: 'XSS',
+        stack: 'back',
+        projects: [1, 2]
     }
 ];
 const store = {Projects,Tech}
