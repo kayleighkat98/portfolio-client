@@ -1,5 +1,9 @@
+$colors: #592941, #498467, #52B788, #B2D3A8, #EDE5A6
+$repeat: 4
+@for $i from 1 through $repeat 
+    .container:nth-child(#{length($colors)}n+#{$i}) 
+        background: nth($colors, $i)
 .container
-    background-color: grey
     height: 85vh
 .landing
     padding-top: 15vh
