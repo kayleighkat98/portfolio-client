@@ -80,144 +80,172 @@ const Projects = [
 const Tech = [
 //FRONT
     {
-        name: 'react',
+        id: 1,
+        name: 'React',
         stack: 'front',
         projects: [1, 2, 3]
     },
     {
-        name: 'react-router-dom',
+        id: 2,
+        name: 'React Router',
         stack: 'front',
         projects: [1, 2, 3]
     },
     {
-        name: 'classnames',
+        id: 3,
+        name: 'Classnames',
         stack: 'front',
         projects: [1, 2]
     },
     {
-        name: 'google maps api',
+        id: 4,
+        name: 'Google Maps API',
         stack: 'front',
         projects: [3]
     },
     {
-        name: 'google places api',
+        id: 5,
+        name: 'Google Places API',
         stack: 'front',
         projects: [3]
     },
     {
-        name: 'jwt-decode',
+        id: 6,
+        name: 'JWT Decode',
         stack: 'front',
         projects: [1, 2, 3]
     },
 //DEV
     {
-        name: 'cross-env',
+        id: 7,
+        name: 'Cross Env',
         stack: 'front',
         projects: [1, 2]
     },
 //BACK
-    {
-        name: 'node',
+    {   
+        id: 8,
+        name: 'Node',
         stack: 'back',
         projects: [1, 3]
     },
     {
-        name: 'npm',
+        id: 9,
+        name: 'NPM',
         stack: 'back',
         projects: [1]
     },
     {
-        name: 'body-parser',
+        id: 10,
+        name: 'Body Parser',
         stack: 'back',
         projects: [3]
     },
     {
-        name: 'bcryptjs',
+        id: 11,
+        name: 'BcryptJS',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        name: 'cors',
+        id: 12,
+        name: 'CORS',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'dotenv',
+        id: 13,
+        name: 'Dotenv',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'express',
+        id: 14,
+        name: 'Express',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'fetch',
+        id: 15,
+        name: 'Fetch',
         stack: 'back',
         projects: [1]
     },
     {
-        name: 'helmet',
+        id: 16,
+        name: 'Helmet',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'jsonwebtoken',
+        id: 17,
+        name: 'Jsonwebtoken',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        name: 'knex',
+        id: 18,
+        name: 'Knex',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'morgan',
+        id: 19,
+        name: 'Morgan',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'pg',
+        id: 20,
+        name: 'Pg',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'uuid',
+        id: 21,
+        name: 'UUID',
         stack: 'back',
         projects: [3]
     },
     {
-        name: 'winston',
+        id: 22,
+        name: 'Winston',
         stack: 'back',
         projects: [3]
     },
     {
-        name: 'postgrator-cli',
+        id: 23,
+        name: 'Postgrator CLI',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'xss',
+        id: 24,
+        name: 'XSS',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        name: 'chai',
+        id: 25,
+        name: 'Chai',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        name: 'mocha',
+        id: 26,
+        name: 'Mocha',
         stack: 'back',
         projects: [1, 2]
     },
     {
-        name: 'nodemon',
+        id: 27,
+        name: 'Nodemon',
         stack: 'back',
         projects: [1, 2, 3]
     },
     {
-        name: 'supertest',
+        id: 28,
+        name: 'Supertest',
         stack: 'back',
         projects: [1, 2, 3]
     }

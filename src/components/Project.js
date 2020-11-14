@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import store  from '../store/store';
-import '../styles/dist/Project.css'
-const projects = store.Projects
-const tech = store.Tech
+import '../styles/dist/Project.css';
+const projects = store.Projects;
+const tech = store.Tech;
 
 class Project extends Component {
     render() {
-        console.log(tech)
+        console.log(this.props.filterValue)
         return(
-            <div className='container project'>
+            <div className='project'>
                 {projects.map((project, i) => {
                     let techUsed = []
-                    tech.map((tech) => {
-                        if (tech.projects.includes(project.id)){
-                            techUsed.push(tech.name+" ")
+                    tech.map((item, i) => {
+                        if (item === tech[tech.length-1]){
+                            techUsed.push(item.name+'.')
+                            return (techUsed)
                         }
-                        return techUsed
+                        techUsed.push(item.name+', ')
+                        return (techUsed)
                     });
-                    console.log(project)
                     return(
                         <div key={i}>
                             <h2>{project.name}</h2>
@@ -40,5 +41,4 @@ class Project extends Component {
         );
     };
 };
-
 export default Project;
