@@ -25,9 +25,3 @@ This client is made to display my portfolio (you can find the link above).I use 
 * @testing-library/user-event
 ### DEV DEPENDENCIES:
 * cross-env
-
-
-
-
-
-
