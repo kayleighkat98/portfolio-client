@@ -26,6 +26,17 @@
 .avatar {
   position: absolute;
   bottom: 0;
-  height: 40vh;
+}
+
+@media (min-width: 100px) {
+  .avatar {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 750px) {
+  .avatar {
+    height: 40vh;
+  }
 }
 /*# sourceMappingURL=App.css.map */

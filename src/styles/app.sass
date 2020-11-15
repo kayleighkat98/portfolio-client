@@ -28,10 +28,14 @@ $repeat: 4
         background: nth($colors, $i)
 .container
     height: 85vh
+    
 .landing
     padding-top: 15vh
     position: relative
 .avatar
     position: absolute
     bottom: 0
-    height: 40vh
+    @include respond-to('small')
+        height: 40vh
+    @include respond-to('medium')
+        height: 40vh
