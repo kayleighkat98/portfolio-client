@@ -20,5 +20,12 @@
 
 .landing {
   padding-top: 15vh;
+  position: relative;
 }
-/*# sourceMappingURL=app.css.map */
+
+.avatar {
+  position: absolute;
+  bottom: 0;
+  height: 40vh;
+}
+/*# sourceMappingURL=App.css.map */
