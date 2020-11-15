@@ -21,7 +21,7 @@ class Projects extends Component {
     };
     render() {
         return(
-            <div className='container'>
+            <div className='projects container'>
                 <h1>Projects</h1>
                 <TechFilter
                     setFilter = {this.setFilter}
