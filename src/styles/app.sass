@@ -10,19 +10,9 @@ $breakpoints: ( 'small':  ( min-width:  100px ),'medium': ( min-width:  750px ),
   // If the key doesn't exist in the map
   @else 
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}."
-// /*EXAMPLE USE (remember to import)
-//  @import './app.sass'
-//     .header
-//     @include respond-to('small')
-//         background-color: black
-//     @include respond-to('medium')
-//         background-color: red
-//     @include respond-to('large')
-//         background-color: blue
-// */
 $colors: #592941, #498467, #52B788, #B2D3A8, #EDE5A6
 $repeat: 4
-
+//LOOP BACKGROUND COLORS
 @for $i from 1 through $repeat 
     .container:nth-child(#{length($colors)}n+#{$i}) 
         background: nth($colors, $i)
@@ -32,6 +22,7 @@ $repeat: 4
 .landing
     padding-top: 15vh
     position: relative
+
 .projects
     height: auto
     

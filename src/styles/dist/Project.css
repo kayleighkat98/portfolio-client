@@ -31,7 +31,6 @@ ul {
   margin-left: inherit;
   display: none;
   width: 100%;
-  list-style-type: none;
   text-align: center;
 }
 
@@ -113,5 +112,9 @@ ul {
 .desk-img {
   width: inherit;
   height: auto;
+}
+
+.center {
+  text-align: center;
 }
 /*# sourceMappingURL=Project.css.map */

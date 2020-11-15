@@ -127,11 +127,10 @@ const Projects = [
             role : 
                 `Tiffany Summerford (my partner in this project) and I set out to divide and conquer with this app.
                 I designed and implemented the front end while she did the same with the server.
-                However, the majority of my efforts were spent developing the client side.
                 I am most proud of the recursive timeout function I made to demo the adoption process.
                 The function is made to slowly work the user to the front of the line by removing the first person and a random pet every 5 seconds until the user is first, then with the same timeout add a random person to the end of the line until there is a total of 5 in line.
-                Though I am proud of the result I look forward to adding more features.
-                For example, I plan to display record of past adoptions as well as display a countdown when running the demo. `
+                Though I am proud of the result, I look forward to adding more features.
+                For example, I plan to display a record of past adoptions as well as display a time-countdown when running the demo. `
                 
             },
             links: {
