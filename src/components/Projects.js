@@ -31,12 +31,14 @@ class Projects extends Component {
                     {projects.map((project, i) => {
                         let techUsed = []
                         tech.map((item, i) => {
-                            if (item === tech[tech.length-1]){
-                                techUsed.push(item.name+'.')
-                                return (techUsed)
+                            if (item.projects.includes(project.id)){
+                                if (item === tech[tech.length-1]){
+                                    techUsed.push(item.name+'.')
+                                }else{
+                                    techUsed.push(item.name+', ')
+                                }
                             }
-                            techUsed.push(item.name+', ')
-                            return (techUsed)
+                            return techUsed
                         });
                         if (this.state.filterValue === null){
                             return(
