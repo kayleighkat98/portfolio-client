@@ -59,7 +59,7 @@ class Project extends Component {
                 <button><a href={project.links.prod_url} target="_blank" rel="noreferrer">Visit</a></button>
                 <button><a href={project.links.client_git} target="_blank" rel="noreferrer">Client Repository</a></button>
                 <button><a href={project.links.server_git} target="_blank" rel="noreferrer">Server Repository</a></button>
-                <h3>Tech Used:</h3>
+                {/* <h3>Tech Used:</h3>
                 <p className='p'>{techUsed}</p>
                 <h3>Summary:</h3>
                 <p className='p'>{project.text.summary}</p>
@@ -142,7 +142,7 @@ class Project extends Component {
                             ) 
                         })}
                     </ul>
-                </div>
+                </div> */}
             </div>
         );
     };
