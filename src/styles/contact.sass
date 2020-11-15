@@ -1,13 +1,33 @@
-$contactWidth: 50vh
+@import 'app.sass'
+$contactSmlWidth: 40vh
+$contactMedWidth: 50vh
+$contactLrgWidth: 85vh
 input, textarea
     font: 15px/24px "Lato", Arial, sans-serif 
     color: #333
-    width: $contactWidth
     box-sizing: border-box
     letter-spacing: 1px
     border: 0
     padding: 7px
     border-bottom: 1px solid #ccc
+
+.submitBtn
+    padding: 5px
+input, textarea, .submitBtn
+    @include respond-to('small')
+        width: $contactSmlWidth
+    @include respond-to('medium')
+        width: $contactMedWidth
+    @include respond-to('large')
+        width: $contactLrgWidth
 iframe
-    width: $contactWidth
-    height: $contactWidth
+    @include respond-to('small')
+        width: $contactSmlWidth
+        height: $contactSmlWidth/1.5
+    @include respond-to('medium')
+        width: $contactMedWidth
+        height: $contactMedWidth
+    @include respond-to('large')
+        width: $contactLrgWidth
+        height: $contactMedWidth
+    
