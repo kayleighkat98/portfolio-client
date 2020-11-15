@@ -26,34 +26,42 @@ const Projects = [
         },
         images: [
             {
+                type: 'mobile',
                 name: 'landing',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/landing.png'
             },
             {
+                type: 'mobile',
                 name: 'confirm',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/confirm.png'
             },
             {
+                type: 'mobile',
                 name: 'items',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/items.png'
             },
             {
+                type: 'mobile',
                 name: 'landing',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/location.png'
             },
             {
+                type: 'mobile',
                 name: 'results',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/results.png'
             },
             {
+                type: 'mobile',
                 name: 'confirm',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/confirm.png'
             },
             {
+                type: 'mobile',
                 name: 'review',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/results.png'
             },
             {
+                type: 'mobile',
                 name: 'user',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/user.png'
             }
@@ -86,18 +94,22 @@ const Projects = [
         },
         images: [
             {
+                type: 'mobile',
                 name: 'home',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/home.png'
             },
             {
+                type: 'mobile',
                 name: 'about',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/about.png'
             },
             {
+                type: 'mobile',
                 name: 'expired',
                 url: 'https://storage.cloud.google.com/kay-the-web-dev/images/Kitchen-Hero/expired.png'
             },
             {
+                type: 'mobile',
                 name: 'new',
                 url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/new.png'
             }
@@ -129,14 +141,17 @@ const Projects = [
             },
             images: [
                 {
+                    type: 'desktop',
                     name: 'adopt',
                     url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/adopt.png'
                 },
                 {
+                    type: 'desktop',
                     name: 'landing',
                     url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/landing.png'
                 },
                 {
+                    type: 'desktop',
                     name: 'wait',
                     url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/wait.png'
                 }

@@ -83,19 +83,46 @@ class Project extends Component {
                     </button>
                     <ul className="images carousel_slides">
                         {project.images.map((image, index) => {
-
-                            return(
-                                <li
-                                    className={
-                                    index == activeIndex
-                                        ? "carousel__slide carousel__slide--active"
-                                        : "carousel__slide"
-                                    }
-                                    key={index}
-                                >
-                                    <img src={image.url} alt={image.name} />
-                                </li>
-                            )
+                            if (image.type === 'mobile'){
+                                return(
+                                    <li
+                                        className={
+                                        index == activeIndex
+                                            ? "carousel__slide carousel__slide--active"
+                                            : "carousel__slide"
+                                        }
+                                        key={index}
+                                    >
+                                        <img className="mob-img" src={image.url} alt={image.name} />
+                                    </li>
+                                )
+                            } else if (image.type === 'desktop'){
+                                return(
+                                    <li
+                                        className={
+                                        index == activeIndex
+                                            ? "carousel__slide carousel__slide--active"
+                                            : "carousel__slide"
+                                        }
+                                        key={index}
+                                    >
+                                        <img className="desk-img" src={image.url} alt={image.name} />
+                                    </li>
+                                )
+                            } else{
+                                return(
+                                    <li
+                                        className={
+                                        index == activeIndex
+                                            ? "carousel__slide carousel__slide--active"
+                                            : "carousel__slide"
+                                        }
+                                        key={index}
+                                    >
+                                        <img className="img" src={image.url} alt={image.name} />
+                                    </li>
+                                )
+                            }
                             
                         })}
                     </ul>
