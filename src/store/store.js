@@ -23,7 +23,41 @@ const Projects = [
             prod_url: 'https://donation-hub-client.vercel.app/',
             client_git: 'https://github.com/kayleighkat98/donation-hub-client',
             server_git: 'https://github.com/jbugayev18/DonationHub-API'
-        }
+        },
+        images: [
+            {
+                name: 'landing',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/landing.png'
+            },
+            {
+                name: 'confirm',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/confirm.png'
+            },
+            {
+                name: 'items',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/items.png'
+            },
+            {
+                name: 'landing',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/location.png'
+            },
+            {
+                name: 'results',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/results.png'
+            },
+            {
+                name: 'confirm',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/confirm.png'
+            },
+            {
+                name: 'review',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/results.png'
+            },
+            {
+                name: 'user',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/user.png'
+            }
+        ]
     },
     {
         id : 2,
@@ -49,7 +83,25 @@ const Projects = [
             prod_url: 'https://kitchen-hero.kayleighkat98.vercel.app/',
             client_git: 'https://github.com/kayleighkat98/kitchen_hero-client',
             server_git: 'https://github.com/kayleighkat98/kitchen_hero-server'
-        }
+        },
+        images: [
+            {
+                name: 'home',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/home.png'
+            },
+            {
+                name: 'about',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/about.png'
+            },
+            {
+                name: 'expired',
+                url: 'https://storage.cloud.google.com/kay-the-web-dev/images/Kitchen-Hero/expired.png'
+            },
+            {
+                name: 'new',
+                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/new.png'
+            }
+        ]
     },
     {
         id : 3,
@@ -74,7 +126,21 @@ const Projects = [
                 prod_url: 'https://petful-client-peach.vercel.app/',
                 client_git: 'https://github.com/thinkful-ei-quail/DSA-Petful-Client-kay-tiff',
                 server_git: 'https://github.com/thinkful-ei-quail/DSA-Petful-Server-Tiff-Kayleigh'
-            }
+            },
+            images: [
+                {
+                    name: 'adopt',
+                    url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/adopt.png'
+                },
+                {
+                    name: 'landing',
+                    url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/landing.png'
+                },
+                {
+                    name: 'wait',
+                    url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/wait.png'
+                }
+            ]
         },
     ];
     const Tech = [

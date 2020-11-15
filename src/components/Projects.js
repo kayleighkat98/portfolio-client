@@ -5,8 +5,13 @@ import store  from '../store/store';
 const projects = store.Projects;
 const tech = store.Tech;
 class Projects extends Component {
-    state = {
-        filterValue: null
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            activeIndex: 0,
+            filterValue: null
+        };
     }
     setFilter = (value) =>{
         this.setState({filterValue: value});
@@ -22,38 +27,45 @@ class Projects extends Component {
                     setFilter = {this.setFilter}
                     undoFilter = {this.undoFilter}
                 />
-                {projects.map((project, i) => {
-                    let techUsed = []
-                    tech.map((item, i) => {
-                        if (item === tech[tech.length-1]){
-                            techUsed.push(item.name+'.')
+                <ul className="carousel_slides">
+                    {projects.map((project, i) => {
+                        let techUsed = []
+                        tech.map((item, i) => {
+                            if (item === tech[tech.length-1]){
+                                techUsed.push(item.name+'.')
+                                return (techUsed)
+                            }
+                            techUsed.push(item.name+', ')
                             return (techUsed)
-                        }
-                        techUsed.push(item.name+', ')
-                        return (techUsed)
-                    });
-                    if (this.state.filterValue === null){
-                        return(
-                            <Project
-                                key = {i}
-                                project = {project}
-                                techUsed = {techUsed}
-                            />
-                        )
-                    }else{
-                        if ( this.state.filterValue.includes(project.id)){
+                        });
+                        if (this.state.filterValue === null){
                             return(
                                 <Project
                                     key = {i}
+                                    index = {i}
                                     project = {project}
                                     techUsed = {techUsed}
                                 />
                             )
-                        } else {
-                            return ('')
+                        }else{
+                            if ( this.state.filterValue.includes(project.id)){
+                                return(
+                                    <Project
+                                    key = {i}
+                                    index = {i}
+                                    project = {project}
+                                    techUsed = {techUsed}
+                                    />
+                                )
+                            } else {
+                                return ('')
+                            };
                         };
-                    };
-                })}
+                    })}
+                </ul>
+
+
+
             </div>
         );
     };
