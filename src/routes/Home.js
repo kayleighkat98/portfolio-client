@@ -3,7 +3,7 @@ import Landing from '../components/Landing';
 import Bio from '../components/Bio';
 import Contact from '../components/Contact';
 import Projects from '../components/Projects';
-
+import ScrollArrow from '../components/ScrollArrow.js';
 class Home extends Component {
     render() {
         return(
@@ -12,6 +12,7 @@ class Home extends Component {
                 <Bio/>
                 <Contact/>
                 <Projects/>
+                <ScrollArrow/>
             </div>
         );
     };
