@@ -37,6 +37,7 @@
 .avatar {
   position: absolute;
   bottom: 0;
+  right: 0;
 }
 
 @media (min-width: 100px) {
@@ -84,6 +85,10 @@ App {
   font-family: lato, sans-serif;
   font-style: normal;
   font-weight: 200;
+  background-color: white;
+  position: absolute;
+  margin-top: 20vh;
+  padding: 5vh 10vh 5vh 0vh;
 }
 
 @media (min-width: 100px) {

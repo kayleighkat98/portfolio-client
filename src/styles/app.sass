@@ -28,12 +28,14 @@ $repeat: 4
   padding-top: 15vh
   position: relative
 
+
 .projects
   height: auto
     
 .avatar
   position: absolute
   bottom: 0
+  right: 0
   @include respond-to('small')
       height: 40vh
   @include respond-to('medium')
@@ -54,14 +56,16 @@ App
   justify-content: center
   animation: fadeIn 0.3s
   transition: opacity 0.4s
-.scrollTop
-
 .scrollTop:hover, .scrollDown:hover
   opacity: 1
 .slogan
   font-family: lato, sans-serif
   font-style: normal
   font-weight: 200
+  background-color: white
+  position: absolute
+  margin-top: 20vh
+  padding: 5vh 10vh 5vh 0vh
   @include respond-to('small')
       font-size: 45px
   @include respond-to('medium')
