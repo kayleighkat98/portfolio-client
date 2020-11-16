@@ -24,7 +24,7 @@ class Bio extends Component {
                     What I've done is minute compared to what's to come because even in my free-time, I am improving.
                     I enjoy travelling and meeting new people, broadening my idea of what consumers need.
                     When my slobber-faced dog is behaving, I enjoy taking him to elderly homes to comfort the residents. 
-                    But no matter where I am, I'm brainstorming ways to improve any unfinished buisness I might have.
+                    But no matter where I am, I'm brainstorming ways to improve any unfinished business I might have.
                 </p>
             </div>
         );
