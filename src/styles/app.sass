@@ -27,10 +27,17 @@ $repeat: 4
 .landing
   padding-top: 15vh
   position: relative
-
-
 .projects
   height: auto
+.bio
+  @include respond-to('small')
+    height: auto
+  @include respond-to('medium')
+    height: 89vh
+    p
+      
+  
+  
     
 .avatar
   position: absolute
