@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/xle6haa.css")
 //DEFINE MEDIA QUERIES//
 $breakpoints: ( 'small':  ( min-width:  100px ),'medium': ( min-width:  750px ),'large':  ( min-width: 1200px ))!default
 @mixin respond-to($breakpoint) 
@@ -14,48 +15,57 @@ $colors: #592941, #498467, #52B788, #B2D3A8, #EDE5A6
 $repeat: 4
 //LOOP BACKGROUND COLORS
 @for $i from 1 through $repeat 
-    .container:nth-child(#{length($colors)}n+#{$i}) 
-        background: nth($colors, $i)
+  .container:nth-child(#{length($colors)}n+#{$i}) 
+      background: nth($colors, $i)
 .container
-    height: 85vh
-    
+  height: 89vh
+.anchor 
+  display: block
+  position: relative
+  top: -12vh
+
 .landing
-    padding-top: 15vh
-    position: relative
+  padding-top: 15vh
+  position: relative
 
 .projects
-    height: auto
+  height: auto
     
 .avatar
-    position: absolute
-    bottom: 0
-    @include respond-to('small')
-        height: 40vh
-    @include respond-to('medium')
-        height: 40vh
+  position: absolute
+  bottom: 0
+  @include respond-to('small')
+      height: 40vh
+  @include respond-to('medium')
+      height: 40vh
 App 
   text-align: center
   height: 5000px
 
-
-.scrollTop 
+.scrollTop, .scrollDown
   position: fixed
   width: 100%
   bottom: 20px
   align-items: center
   height: 20px
-  justify-content: center
   z-index: 1000
+  opacity: 0.5
   cursor: pointer
+  justify-content: center
   animation: fadeIn 0.3s
   transition: opacity 0.4s
-  opacity: 0.5
+.scrollTop
 
-
-.scrollTop:hover
+.scrollTop:hover, .scrollDown:hover
   opacity: 1
-
-
+.slogan
+  font-family: lato, sans-serif
+  font-style: normal
+  font-weight: 200
+  @include respond-to('small')
+      font-size: 45px
+  @include respond-to('medium')
+      font-size: 60px
 @keyframes fadeIn 
   0% 
     opacity: 0

@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import '../styles/dist/contact.css'
+import {AiFillGithub, AiFillLinkedin, AiOutlineMail} from 'react-icons/ai'
 
 class Contact extends Component {
 
     render() {
         return(
             <div className='container'>
+                <div id='contact' className='anchor'/>
                 <h2>Contact Kayleigh</h2>
                 <div className='center'>
                     <section>
                     <p>Let's create something wonderful...</p>
 
-                    <a href="https://github.com/kayleighkat98" rel='noreferrer' target="_blank">GitHub</a>
+                    <a href="https://github.com/kayleighkat98" rel='noreferrer' target="_blank"><AiFillGithub className ='icon github'/>Github</a>
 
-                    <a href="https://www.linkedin.com/in/kayleigh-young-064191ab/" rel='noreferrer' target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/kayleigh-young-064191ab/" rel='noreferrer' target="_blank"><AiFillLinkedin className='icon linked-in'/>Linked-in</a>
 
-                    <a href="mailto:kyoung.communications@gmail.com" rel='noreferrer' target="_blank">Email Me</a>
+                    <a href="mailto:kyoung.communications@gmail.com" rel='noreferrer' target="_blank"><AiOutlineMail className='icon email'/>E</a>
 
                     </section>
 

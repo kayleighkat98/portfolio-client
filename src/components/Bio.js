@@ -5,7 +5,8 @@ class Bio extends Component {
     render() {
         return(
             <div className='container'>
-               <h1>About me</h1>
+                <div id='bio' className='anchor'/>
+               <h1 >About me</h1>
                <p>
                    You are so lucky to have found me. 
                    Chances are, your life just got a little bit better. 

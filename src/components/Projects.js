@@ -22,6 +22,7 @@ class Projects extends Component {
     render() {
         return(
             <div className='projects container'>
+                <div id='projects' className='anchor'/>
                 <h1>Projects</h1>
                 <TechFilter
                     setFilter = {this.setFilter}
