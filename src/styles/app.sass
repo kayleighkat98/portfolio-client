@@ -1,4 +1,12 @@
 @import url("https://use.typekit.net/xle6haa.css")
+@mixin lato()
+  font-family: lato, sans-serif
+  font-style: normal
+  font-weight: 200
+@mixin myriad()
+  font-family: myriad-pro-condensed, sans-serif
+  font-weight: 700
+  font-style: normal
 //DEFINE MEDIA QUERIES//
 $breakpoints: ( 'small':  ( min-width:  100px ),'medium': ( min-width:  750px ),'large':  ( min-width: 1200px ))!default
 @mixin respond-to($breakpoint) 
@@ -34,11 +42,7 @@ $repeat: 4
     height: auto
   @include respond-to('medium')
     height: 89vh
-    p
-      
-  
-  
-    
+    p  
 .avatar
   position: absolute
   bottom: 0
@@ -66,9 +70,7 @@ App
 .scrollTop:hover, .scrollDown:hover
   opacity: 1
 .slogan
-  font-family: lato, sans-serif
-  font-style: normal
-  font-weight: 200
+  @include lato()
   background-color: white
   position: absolute
   margin-top: 20vh
@@ -83,4 +85,7 @@ App
   
   100% 
     opacity: 0.5
+h1, h2, h3
+  @include myriad()
+  
   

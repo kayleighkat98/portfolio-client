@@ -3,7 +3,7 @@ import { Route, Switch} from 'react-router-dom';
 import Header from './components/Header';
 import Home from './routes/Home';
 import NotFound from './routes/NotFound';
-import './styles/dist/App.css'
+import './styles/dist/App.css';
 
 class App extends Component {
   state = { hasError: false };

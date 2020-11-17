@@ -17,8 +17,8 @@ const Scroll = () =>{
   const scrollTop = () =>{
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
-  // const scrollBy = () =>{ //  SCROLL DOWN 88VH (TO NEXT COMPONENT)
-  //   console.log('down scroll')
+  //  CREATE FUNCTION TO SCROLL DOWN 88VH EACH CLICK(TO NEXT COMPONENT)
+  // const scrollBy = () =>{ 
   //   window.scrollBy(0, 88 * window.innerHeight/100)
   // }
 

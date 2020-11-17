@@ -1,3 +1,17 @@
+.mob-img {
+  width: 30vh;
+  height: 55vh;
+}
+
+.desk-img {
+  width: inherit;
+  height: auto;
+}
+
+.center {
+  text-align: center;
+}
+
 p {
   margin: 0vh 4vh 0vh 4vh;
 }
@@ -102,19 +116,5 @@ ul {
 
 .carousel__indicator--active:hover {
   opacity: .75;
-}
-
-.mob-img {
-  width: 30vh;
-  height: 55vh;
-}
-
-.desk-img {
-  width: inherit;
-  height: auto;
-}
-
-.center {
-  text-align: center;
 }
 /*# sourceMappingURL=Project.css.map */

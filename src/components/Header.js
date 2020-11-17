@@ -14,10 +14,10 @@ class Header extends Component {
                     </div>
                 </div>
                 <nav>
-                    <a href="#landing">Home</a>
-                    <a href="#bio">Bio</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#projects">Projects</a>
+                    <a href="#landing">Home |</a>
+                    <a href="#bio"> Bio |</a>
+                    <a href="#contact"> Contact |</a>
+                    <a href="#projects"> Projects</a>
 		        </nav>
             </div>
         );
