@@ -54,15 +54,16 @@ class Project extends Component {
         const {project, techUsed} = this.props
         const {activeIndex} = this.state
         return(
-            <div className="project">
+            <li className="project">
                 <div className='title center'>
                     <span className='project-name'>{project.name}</span>
                     <span>A {project.stack}-stack application</span>
                 </div>
                 <div className='center'>
-                    <a href={project.links.prod_url} target="_blank" rel="noreferrer"><button>Visit</button></a>
-                    <a href={project.links.client_git} target="_blank" rel="noreferrer"><button>Client Repository</button></a>
-                    <a href={project.links.server_git} target="_blank" rel="noreferrer"><button>Server Repository</button></a>
+                    
+                    <button onClick={() => {window.location.href=`${project.links.prod_url}`}} >Visit</button>
+                    <button onClick={() => {window.location.href=`${project.links.client_git}`}}>Client Repository</button>
+                    <button onClick={() => {window.location.href=`${project.links.server_git}`}}>Server Repository</button>
                 </div>
                 <h3>Tech Used:</h3>
                 <p className='p'>{techUsed}</p>
@@ -72,7 +73,6 @@ class Project extends Component {
                 <p className='p'>{project.text.role}</p>
                 <div className='carousel'>
                     <FaArrowCircleLeft
-                        href="#"
                         className="carousel__arrow carousel__arrow--left"
                         onClick={e => this.goToPrevSlide(e)}
                     />
@@ -123,7 +123,6 @@ class Project extends Component {
                         })}
                     </ul>
                     <FaArrowCircleRight
-                        href="#"
                         className="carousel__arrow carousel__arrow--right"
                         onClick={e => this.goToNextSlide(e)}
                     />
@@ -144,7 +143,7 @@ class Project extends Component {
                         })}
                     </ul>
                 </div>
-            </div>
+            </li>
         );
     };
 };

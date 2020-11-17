@@ -214,7 +214,7 @@ input, textarea {
 @media (min-width: 750px) {
   iframe {
     width: 50vh;
-    height: 50vh;
+    height: 40vh;
   }
 }
 
