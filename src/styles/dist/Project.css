@@ -35,13 +35,13 @@
 }
 
 .bio {
-  height: 89vh;
+  height: auto;
 }
 
-@media (max-width: 375px) {
-  .bio div p {
-    font-size: 2vh;
-  }
+.bio .bio-text {
+  margin: 0vh 10vh;
+  text-align: center;
+  padding: 1vh;
 }
 
 .avatar {
@@ -70,11 +70,10 @@ App {
 .scrollTop, .scrollDown {
   position: fixed;
   width: 100%;
-  bottom: 20px;
+  bottom: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 20px;
   z-index: 1000;
   opacity: 0.5;
   cursor: pointer;
@@ -138,9 +137,9 @@ h1, h2, h3 {
 }
 
 .filterBtn {
-  font-family: lato, sans-serif;
+  font-family: myriad-pro-condensed, sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-weight: 200;
   background-color: #181026;
   color: white;
   font-size: 1.5vh;
@@ -187,6 +186,14 @@ ul {
   font-family: league-gothic-condensed, sans-serif;
   font-weight: 400;
   font-style: italic;
+}
+
+@media (max-width: 375px) {
+  .project .title .project-name {
+    font-weight: 500;
+    font-size: 4vh;
+    letter-spacing: 4px;
+  }
 }
 
 @media (min-width: 375px) {

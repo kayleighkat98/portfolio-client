@@ -15,6 +15,10 @@ ul
     padding: 10vh 0vh 2vh 
     .project-name
       @include gothic()
+      @include respond-to('xsmall')
+        font-weight: 500
+        font-size: 4vh
+        letter-spacing: 4px    
       @include respond-to('small')
         font-weight: 500
         font-size: 5vh

@@ -34,16 +34,8 @@
   height: auto;
 }
 
-@media (max-width: 375px) {
-  .bio div p {
-    font-size: 2vh;
-  }
-}
-
-@media (min-width: 375px) {
-  .bio {
-    height: auto;
-  }
+.bio {
+  height: auto;
 }
 
 .bio .bio-text {
