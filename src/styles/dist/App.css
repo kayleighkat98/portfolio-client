@@ -47,6 +47,7 @@
 }
 
 .bio .bio-text {
+  margin: 0vh 10vh;
   text-align: center;
   padding: 1vh;
 }
