@@ -49,7 +49,10 @@ $repeat: 4
       p
         font-size: 2vh
   @include respond-to('small')
-  height: 89vh
+    height: auto
+  .bio-text
+    text-align: center
+    padding: 1vh
      
 .avatar
   position: absolute
@@ -66,9 +69,8 @@ App
 .scrollTop, .scrollDown
   position: fixed
   width: 100%
-  bottom: 20px
+  bottom: 50px
   align-items: center
-  height: 20px
   z-index: 1000
   opacity: 0.5
   cursor: pointer
@@ -96,7 +98,7 @@ App
 h1, h2, h3
   @include myriad()
 .filterBtn
-  @include my()
+  @include myriad()
   background-color: $navy
   color: white
   font-size: 1.5vh

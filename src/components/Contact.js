@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/dist/contact.css'
-import {AiFillGithub, AiFillLinkedin, AiOutlineMail} from 'react-icons/ai'
+
 
 class Contact extends Component {
 
@@ -12,12 +12,6 @@ class Contact extends Component {
                 <div className='center'>
                     <section>
                         <p>Let's create something wonderful...</p>
-
-                        <a href="https://github.com/kayleighkat98" rel='noreferrer' target="_blank"><AiFillGithub className ='icon github'/>Github</a>
-
-                        <a href="https://www.linkedin.com/in/kayleigh-young-064191ab/" rel='noreferrer' target="_blank"><AiFillLinkedin className='icon linked-in'/>Linked-in</a>
-
-                        <a href="mailto:kyoung.communications@gmail.com" rel='noreferrer' target="_blank"><AiOutlineMail className='icon email'/>E-Mail</a>
                     </section>
 
                     <section className="item">

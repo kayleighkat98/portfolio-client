@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch} from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './routes/Home';
 import NotFound from './routes/NotFound';
 import './styles/dist/App.css';
@@ -32,6 +33,7 @@ class App extends Component {
               />
           </Switch>
         </main>
+        <Footer/>
       </div>
     );
   };

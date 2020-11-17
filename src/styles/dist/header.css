@@ -34,16 +34,21 @@
   height: auto;
 }
 
-@media (min-width: 100px) {
+@media (max-width: 375px) {
+  .bio div p {
+    font-size: 2vh;
+  }
+}
+
+@media (min-width: 375px) {
   .bio {
     height: auto;
   }
 }
 
-@media (min-width: 750px) {
-  .bio {
-    height: 89vh;
-  }
+.bio .bio-text {
+  text-align: center;
+  padding: 1vh;
 }
 
 .avatar {
@@ -52,7 +57,7 @@
   right: 0;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .avatar {
     height: 40vh;
   }
@@ -103,7 +108,7 @@ App {
   padding: 5vh 10vh 5vh 0vh;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .slogan {
     font-size: 45px;
   }
@@ -140,19 +145,19 @@ h1, h2, h3 {
 }
 
 .filterBtn {
-  font-family: lato, sans-serif;
+  font-family: myriad-pro-condensed, sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-weight: 200;
   background-color: #181026;
   color: white;
   font-size: 1.5vh;
   margin: .5vh 0vh;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .filterBtn {
     height: 23px;
-    width: 100px;
+    width: 15vh;
   }
 }
 
@@ -214,7 +219,7 @@ nav a {
   font-size: 2vh;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   nav a {
     text-align: center;
     padding: 7.5vh 1vh;

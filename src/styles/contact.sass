@@ -6,7 +6,7 @@ input, textarea
     @include myriad()
     color: #333
     box-sizing: border-box
-    letter-spacing: 1px
+    letter-spacing: 5px
     border: 0
     padding: 7px
     border-bottom: 1px solid #ccc
@@ -29,16 +29,15 @@ iframe
         height: $contactSmlWidth
     @include respond-to('large')
         width: $contactLrgWidth
-        height: $contactMedWidth
+        height: $contactMedWidth/1.5
 section
-    a
-        text-decoration: none
-        color: black
-        padding: 1.5vh
-        font-size: 2vh
-    a:hover
-        color: red
     p
         @include gothic()
         font-size: 5vh
         padding: 2vh 0vh 1vh 0vh
+        @include respond-to('medium')
+            font-size: 6vh
+            letter-spacing: .2vh
+        @include respond-to('large')
+            font-size: 7vh
+            letter-spacing: .9vh
