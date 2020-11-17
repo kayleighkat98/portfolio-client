@@ -152,7 +152,7 @@ h1, h2, h3 {
 @media (min-width: 100px) {
   .filterBtn {
     height: 23px;
-    width: 100px;
+    width: 15vh;
   }
 }
 

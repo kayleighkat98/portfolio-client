@@ -56,9 +56,9 @@ class Project extends Component {
             <div className="project">
                 <h2>{project.name}</h2>
                 <p className='p'>A {project.stack}-stack application</p>
-                <button><a href={project.links.prod_url} target="_blank" rel="noreferrer">Visit</a></button>
-                <button><a href={project.links.client_git} target="_blank" rel="noreferrer">Client Repository</a></button>
-                <button><a href={project.links.server_git} target="_blank" rel="noreferrer">Server Repository</a></button>
+                <a href={project.links.prod_url} target="_blank" rel="noreferrer"><button>Visit</button></a>
+                <a href={project.links.client_git} target="_blank" rel="noreferrer"><button>Client Repository</button></a>
+                <a href={project.links.server_git} target="_blank" rel="noreferrer"><button>Server Repository</button></a>
                 <h3>Tech Used:</h3>
                 <p className='p'>{techUsed}</p>
                 <h3>Summary:</h3>
