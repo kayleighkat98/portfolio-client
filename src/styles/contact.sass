@@ -3,7 +3,7 @@ $contactSmlWidth: 40vh
 $contactMedWidth: 50vh
 $contactLrgWidth: 85vh
 input, textarea
-    font: 15px/24px "Lato", Arial, sans-serif 
+    @include myriad()
     color: #333
     box-sizing: border-box
     letter-spacing: 1px
@@ -30,4 +30,12 @@ iframe
     @include respond-to('large')
         width: $contactLrgWidth
         height: $contactMedWidth
+section a
+    text-decoration: none
+    color: black
+    padding: 1.5vh
+    font-size: 2vh
+
+section a:hover
+    color: red
     
