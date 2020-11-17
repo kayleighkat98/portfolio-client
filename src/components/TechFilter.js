@@ -6,10 +6,12 @@ class TechFilter extends Component {
         return(
             <div className='tech-filter'>
                 <h3>Filter:</h3>
-                <button key={'all'} onClick={e =>this.props.undoFilter()}>All</button>
-                {tech.map((item, i)=>{
-                    return (<button key={i} onClick={e =>this.props.setFilter(item.projects)}>{item.name}</button>)
-                })}
+                <div className='filters'>
+                    <button className='filterBtn' key={'all'} onClick={e =>this.props.undoFilter()}>All</button>
+                    {tech.map((item, i)=>{
+                        return (<button className='filterBtn' key={i} onClick={e =>this.props.setFilter(item.projects)}>{item.name}</button>)
+                    })}
+                </div>
             </div>
         );
     };

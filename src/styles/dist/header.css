@@ -139,6 +139,15 @@ h1, h2, h3 {
   font-style: normal;
 }
 
+@media (min-width: 100px) {
+  .filterBtn {
+    font-size: 1.5vh;
+    margin: 1vh 0vh;
+    width: 100px;
+    height: 20px;
+  }
+}
+
 .header {
   font-family: myriad-pro-condensed, sans-serif;
   font-weight: 700;
