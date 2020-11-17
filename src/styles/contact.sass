@@ -1,4 +1,5 @@
 @import 'app.sass'
+$contactXSmlWidth: 30vh
 $contactSmlWidth: 40vh
 $contactMedWidth: 50vh
 $contactLrgWidth: 85vh
@@ -11,11 +12,11 @@ input, textarea
     padding: 7px
     border-bottom: 1px solid #ccc
     @include respond-to('xsmall')
-    
-
 .submitBtn
     padding: 5px
 input, textarea, .submitBtn
+    @include respond-to('xsmall')
+        width: $contactXSmlWidth
     @include respond-to('small')
         width: $contactSmlWidth
     @include respond-to('medium')
@@ -23,6 +24,9 @@ input, textarea, .submitBtn
     @include respond-to('large')
         width: $contactLrgWidth
 iframe
+    @include respond-to('xsmall')
+        width: $contactXSmlWidth
+        height: $contactXSmlWidth
     @include respond-to('small')
         width: $contactSmlWidth
         height: $contactSmlWidth/1.5

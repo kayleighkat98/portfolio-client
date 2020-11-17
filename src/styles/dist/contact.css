@@ -185,6 +185,12 @@ input, textarea {
   padding: 5px;
 }
 
+@media (max-width: 375px) {
+  input, textarea, .submitBtn {
+    width: 30vh;
+  }
+}
+
 @media (min-width: 375px) {
   input, textarea, .submitBtn {
     width: 40vh;
@@ -200,6 +206,13 @@ input, textarea {
 @media (min-width: 1200px) {
   input, textarea, .submitBtn {
     width: 85vh;
+  }
+}
+
+@media (max-width: 375px) {
+  iframe {
+    width: 30vh;
+    height: 30vh;
   }
 }
 
