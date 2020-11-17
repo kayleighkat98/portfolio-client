@@ -1,3 +1,4 @@
+@import ./app
 .mob-img
   width: 30vh
   height: 55vh
@@ -37,8 +38,6 @@ ul
   display: none
   width: 100%
   text-align: center
-
-
   &--active 
     display: block
 
@@ -52,29 +51,21 @@ ul
   opacity: .75
   transform: translateY(-50%)
   transition: opacity .15s cubic-bezier(.4, 0, 1, 1)
-
   &:focus 
     outline: 0
-  
-
   &:hover 
     opacity: .5
-  
-
   &--left 
     left: 32px
-  
-
   &--right 
     right: 32px
-  
+
 // Carousel indicators
 .carousel__indicators 
   display: flex
   flex-direction: row
   justify-content: center
   margin-top: 20px
-
   li 
     &:nth-of-type(n + 2) 
       margin-left: 9px 
@@ -96,6 +87,20 @@ ul
     &
     &:hover 
       opacity: .75
+.project-name
+  @include gothic()
+  @include respond-to('small')
+    font-weight: 500
+    font-size: 5vh
+    letter-spacing: 4px
+  @include respond-to('medium')
+    font-weight: 500
+    font-size: 6vh
+    letter-spacing: 8px
+.title
+  padding: 10vh 0vh 2vh 
+
+  
 
     
 

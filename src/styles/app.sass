@@ -7,8 +7,13 @@
   font-family: myriad-pro-condensed, sans-serif
   font-weight: 700
   font-style: normal
+@mixin gothic()
+  font-family: league-gothic-condensed, sans-serif
+  font-weight: 400
+  font-style: italic
+
 //DEFINE MEDIA QUERIES//
-$breakpoints: ( 'small':  ( min-width:  100px ),'medium': ( min-width:  750px ),'large':  ( min-width: 1200px ))!default
+$breakpoints: ( 'xx-small': (max-width: 375px), 'small':  ( min-width:  375px ),'medium': ( min-width:  750px ),'large':  ( min-width: 1200px ))!default
 @mixin respond-to($breakpoint) 
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) 
@@ -39,10 +44,12 @@ $repeat: 4
 .projects
   height: auto
 .bio
+  @include respond-to('xx-small')
+    div
+      p
+        font-size: 2vh
   @include respond-to('small')
-    height: auto
-  @include respond-to('medium')
-    height: 89vh
+  height: 89vh
      
 .avatar
   position: absolute

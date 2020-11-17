@@ -8,7 +8,7 @@ class Contact extends Component {
         return(
             <div className='container'>
                 <div id='contact' className='anchor'/>
-                <h2>Contact Kayleigh</h2>
+                <h2>Contact</h2>
                 <div className='center'>
                     <section>
                         <p>Let's create something wonderful...</p>
@@ -21,7 +21,7 @@ class Contact extends Component {
                     </section>
 
                     <section className="item">
-                        <form action="https://formspree.io/moqknbgv" target="_blank" method="POST">
+                        <form action="https://formspree.io/f/moqknbgv" method="POST">
                             <label htmlFor="user-name"></label>
                             <input id="user-name" type="text" name="name" placeholder="*Name"/>
                             <br/>

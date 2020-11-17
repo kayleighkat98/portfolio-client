@@ -23,7 +23,7 @@ class Projects extends Component {
         return(
             <div className='projects container'>
                 <div id='projects' className='anchor'/>
-                <h1>Projects</h1>
+                <h2>Projects</h2>
                 <TechFilter
                     setFilter = {this.setFilter}
                     undoFilter = {this.undoFilter}

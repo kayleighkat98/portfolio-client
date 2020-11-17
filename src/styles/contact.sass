@@ -30,12 +30,15 @@ iframe
     @include respond-to('large')
         width: $contactLrgWidth
         height: $contactMedWidth
-section a
-    text-decoration: none
-    color: black
-    padding: 1.5vh
-    font-size: 2vh
-
-section a:hover
-    color: red
-    
+section
+    a
+        text-decoration: none
+        color: black
+        padding: 1.5vh
+        font-size: 2vh
+    a:hover
+        color: red
+    p
+        @include gothic()
+        font-size: 5vh
+        padding: 2vh 0vh 1vh 0vh

@@ -54,11 +54,15 @@ class Project extends Component {
         const {activeIndex} = this.state
         return(
             <div className="project">
-                <h2>{project.name}</h2>
-                <p className='p'>A {project.stack}-stack application</p>
-                <a href={project.links.prod_url} target="_blank" rel="noreferrer"><button>Visit</button></a>
-                <a href={project.links.client_git} target="_blank" rel="noreferrer"><button>Client Repository</button></a>
-                <a href={project.links.server_git} target="_blank" rel="noreferrer"><button>Server Repository</button></a>
+                <div className='title center'>
+                    <span className='project-name'>{project.name}</span>
+                    <span>A {project.stack}-stack application</span>
+                </div>
+                <div className='center'>
+                    <a href={project.links.prod_url} target="_blank" rel="noreferrer"><button>Visit</button></a>
+                    <a href={project.links.client_git} target="_blank" rel="noreferrer"><button>Client Repository</button></a>
+                    <a href={project.links.server_git} target="_blank" rel="noreferrer"><button>Server Repository</button></a>
+                </div>
                 <h3>Tech Used:</h3>
                 <p className='p'>{techUsed}</p>
                 <h3>Summary:</h3>

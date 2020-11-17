@@ -34,15 +34,13 @@
   height: auto;
 }
 
-@media (min-width: 100px) {
-  .bio {
-    height: auto;
-  }
+.bio {
+  height: 89vh;
 }
 
-@media (min-width: 750px) {
-  .bio {
-    height: 89vh;
+@media (max-width: 375px) {
+  .bio div p {
+    font-size: 2vh;
   }
 }
 
@@ -52,7 +50,7 @@
   right: 0;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .avatar {
     height: 40vh;
   }
@@ -103,7 +101,7 @@ App {
   padding: 5vh 10vh 5vh 0vh;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .slogan {
     font-size: 45px;
   }
@@ -139,6 +137,38 @@ h1, h2, h3 {
   font-style: normal;
 }
 
+.filterBtn {
+  font-family: lato, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  background-color: #181026;
+  color: white;
+  font-size: 1.5vh;
+  margin: .5vh 0vh;
+}
+
+@media (min-width: 375px) {
+  .filterBtn {
+    height: 23px;
+    width: 15vh;
+  }
+}
+
+@media (min-width: 750px) {
+  .filterBtn {
+    width: 18vh;
+    height: 25px;
+  }
+}
+
+.filterBtn:hover {
+  border-color: red;
+}
+
+.filters {
+  text-align: center;
+}
+
 input, textarea {
   font-family: myriad-pro-condensed, sans-serif;
   font-weight: 700;
@@ -156,7 +186,7 @@ input, textarea {
   padding: 5px;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   input, textarea, .submitBtn {
     width: 40vh;
   }
@@ -174,7 +204,7 @@ input, textarea {
   }
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   iframe {
     width: 40vh;
     height: 26.66667vh;
@@ -204,5 +234,13 @@ section a {
 
 section a:hover {
   color: red;
+}
+
+section p {
+  font-family: league-gothic-condensed, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 5vh;
+  padding: 2vh 0vh 1vh 0vh;
 }
 /*# sourceMappingURL=contact.css.map */

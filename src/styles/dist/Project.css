@@ -1,3 +1,176 @@
+@import url("https://use.typekit.net/xle6haa.css");
+.container:nth-child(5n+1) {
+  background: #592941;
+}
+
+.container:nth-child(5n+2) {
+  background: #498467;
+}
+
+.container:nth-child(5n+3) {
+  background: #52B788;
+}
+
+.container:nth-child(5n+4) {
+  background: #B2D3A8;
+}
+
+.container {
+  height: 89vh;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -12vh;
+}
+
+.landing {
+  padding-top: 15vh;
+  position: relative;
+}
+
+.projects {
+  height: auto;
+}
+
+@media (min-width: 100px) {
+  .bio {
+    height: auto;
+  }
+}
+
+@media (min-width: 750px) {
+  .bio {
+    height: 89vh;
+  }
+}
+
+.avatar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (min-width: 100px) {
+  .avatar {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 750px) {
+  .avatar {
+    height: 40vh;
+  }
+}
+
+App {
+  text-align: center;
+  height: 5000px;
+}
+
+.scrollTop, .scrollDown {
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  z-index: 1000;
+  opacity: 0.5;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: fadeIn 0.3s;
+          animation: fadeIn 0.3s;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.scrollTop:hover, .scrollDown:hover {
+  opacity: 1;
+}
+
+.slogan {
+  font-family: lato, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  background-color: white;
+  position: absolute;
+  margin-top: 20vh;
+  padding: 5vh 10vh 5vh 0vh;
+}
+
+@media (min-width: 100px) {
+  .slogan {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 750px) {
+  .slogan {
+    font-size: 60px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+h1, h2, h3 {
+  font-family: myriad-pro-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.filterBtn {
+  font-family: lato, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  background-color: #181026;
+  color: white;
+  font-size: 1.5vh;
+  margin: .5vh 0vh;
+}
+
+@media (min-width: 100px) {
+  .filterBtn {
+    height: 23px;
+    width: 15vh;
+  }
+}
+
+@media (min-width: 750px) {
+  .filterBtn {
+    width: 18vh;
+    height: 25px;
+  }
+}
+
+.filterBtn:hover {
+  border-color: red;
+}
+
+.filters {
+  text-align: center;
+}
+
 .mob-img {
   width: 30vh;
   height: 55vh;
@@ -116,5 +289,31 @@ ul {
 
 .carousel__indicator--active:hover {
   opacity: .75;
+}
+
+.project-name {
+  font-family: league-gothic-condensed, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media (min-width: 100px) {
+  .project-name {
+    font-weight: 500;
+    font-size: 5vh;
+    letter-spacing: 4px;
+  }
+}
+
+@media (min-width: 750px) {
+  .project-name {
+    font-weight: 500;
+    font-size: 6vh;
+    letter-spacing: 8px;
+  }
+}
+
+.title {
+  padding: 10vh 0vh 2vh;
 }
 /*# sourceMappingURL=Project.css.map */

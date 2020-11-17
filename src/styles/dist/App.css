@@ -34,15 +34,13 @@
   height: auto;
 }
 
-@media (min-width: 100px) {
-  .bio {
-    height: auto;
-  }
+.bio {
+  height: 89vh;
 }
 
-@media (min-width: 750px) {
-  .bio {
-    height: 89vh;
+@media (max-width: 375px) {
+  .bio div p {
+    font-size: 2vh;
   }
 }
 
@@ -52,7 +50,7 @@
   right: 0;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .avatar {
     height: 40vh;
   }
@@ -103,7 +101,7 @@ App {
   padding: 5vh 10vh 5vh 0vh;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .slogan {
     font-size: 45px;
   }
@@ -149,7 +147,7 @@ h1, h2, h3 {
   margin: .5vh 0vh;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 375px) {
   .filterBtn {
     height: 23px;
     width: 15vh;
