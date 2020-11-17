@@ -5,17 +5,17 @@ const Projects = [
         stack: 'full',
         text: {
             summary : 
-                `In most scenarios, people are willing to donate. However, it is not always clear what organizations really need or how much of what they are seeking is needed. 
-                In order to help strengthen the donation process, we decided to create Donation-Hub. 
-                Donation-Hub exists as a way to centralize the efforts community champions (donators) need in order to best serve their communities. 
-                By using the DonationHub website, users are able to locate organization near them, browse items that location needs, and give as they please accordingly. 
-                Users are also able to go in and add donation sites for organizations that may not be as internet accesible.`
+                `In most scenarios, people are willing to donate. However, it is not always clear what organizations need or how much of what they are seeking is needed. 
+                To help strengthen the donation process, we decided to create Donation-Hub. 
+                Donation-Hub exists as a way to centralize the efforts community champions (donators) need to best serve their communities. 
+                By using the Donation-Hub website, users can locate an organization near them, browse items that are needed, and give as they please accordingly. 
+                Users are also able to go in and add donation sites for organizations that may not be as internet accessible.`
             ,
             role : 
                 `In a team of 3 other student developers, my role played parts in all aspects of creating this app. 
-                However, the majority of my efforts were spent developing the client side.
+                However, the majority of my efforts were spent developing the client-side.
                 I am most proud of designing and creating the route contents for adding a new donation center.
-                I took advantage of the google api we were already using where ever I could, while also keeping the request count to the bare minimum.
+                I took advantage of the Google API we were already using where ever I could, while also keeping the request count to the bare minimum.
                 Though I am proud of the result I look forward to adding more instructions for the user, in case they grow confused when adding details to the location.`
             
         },
@@ -81,10 +81,10 @@ const Projects = [
                 If you are a returning user, take a look to see if any of your items have expired and throw them away before they get moldy! `
             ,
             role : 
-                `As the sole creater of Kitchen Hero, I imagined and birthed what it is today. 
+                `As the sole creator of Kitchen Hero, I imagined and birthed what it is today. 
                 I am most proud of the concept Kitchen-Hero is founded on.
-                Personally, I have had a decent amount of struggle finding a proper solution when managing my kitchen even after scouring the web for resources.
-                This is a passion project, that in time will have more incredible features such as generating recipies based on user preference and inventory.`
+                I have had a decent amount of struggle finding a proper solution when managing my kitchen even after scouring the web for resources.
+                This is a passion project, that in time will have more incredible features such as generating recipes based on user preference and inventory.`
             
         },
         links: {
@@ -121,7 +121,7 @@ const Projects = [
         stack: 'full',
         text: {
             summary : 
-                `Petful is an adoption agency app that uses singly linked lists to adopt out pets on a first-come first-serve basis. 
+                `Petful is an adoption agency app that uses singly-linked lists to adopt out pets on a first-come-first-serve basis. 
                 By signing up for adoption, a user will be added to a list and will then be able to adopt a pet based on the oldest pet available at the time.`
             ,
             role : 
