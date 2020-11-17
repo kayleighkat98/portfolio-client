@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import store  from '../store/store';
 import '../styles/dist/Project.css';
+import {FaArrowCircleRight, FaArrowCircleLeft} from 'react-icons/fa';
 const projects = store.Projects;
 class Project extends Component {
     constructor(props) {
@@ -70,22 +71,13 @@ class Project extends Component {
                 <h3>My Role</h3>
                 <p className='p'>{project.text.role}</p>
                 <div className='carousel'>
-                    <button
+                    <FaArrowCircleLeft
                         href="#"
-                        // className="carousel__arrow carousel__arrow--left"
+                        className="carousel__arrow carousel__arrow--left"
                         onClick={e => this.goToPrevSlide(e)}
-                    >
-                        <span className="fa fa-2x fa-angle-left" >Previous</span>
-                    </button>
+                    />
                     
-                    <button
-                        href="#"
-                        //className="carousel__arrow carousel__arrow--right"
-                        onClick={e => this.goToNextSlide(e)}
-                    >
-                        <span className="fa fa-2x fa-angle-right" >Next</span>
-                    </button>
-                    <ul className="images carousel_slides">
+                    <ul>
                         {project.images.map((image, index) => {
                             if (image.type === 'mobile'){
                                 return(
@@ -130,6 +122,11 @@ class Project extends Component {
                             
                         })}
                     </ul>
+                    <FaArrowCircleRight
+                        href="#"
+                        className="carousel__arrow carousel__arrow--right"
+                        onClick={e => this.goToNextSlide(e)}
+                    />
                     <ul className="carousel__indicators">
                         {project.images.map((project, index) => {
                             return(

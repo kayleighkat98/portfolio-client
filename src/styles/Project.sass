@@ -1,104 +1,87 @@
 @import ./app
-.mob-img
-  width: 30vh
-  height: 55vh
-.desk-img
-  width: inherit
-  height: auto
-.center
-  text-align: center
-p
-  margin: 0vh 4vh 0vh 4vh
 
-// SASS variable for media query breakpoint
 $breakpoint-desktop: 992px
 
-// Resetting default styles
 ul 
   padding: 0
   margin: 0
   list-style-type: none
 
-
-//***STYLE SCREENSHOT CAROUSEL***//
-// Fix for jumping arrows
-.carousel-container 
-  display: flex
-  flex-direction: column
-  justify-content: center
-  min-height: 210px
-
-.carousel 
-  position: relative
-
-// Carousel slides
-.carousel__slide 
-  margin-right: inherit
-  margin-left: inherit
-  display: none
-  width: 100%
+.center
   text-align: center
-  &--active 
-    display: block
 
-// Carousel arrows
-.carousel__arrow 
-  position: absolute
-  top: 50%
-  display: block
-  color: #111
-  cursor: pointer
-  opacity: .75
-  transform: translateY(-50%)
-  transition: opacity .15s cubic-bezier(.4, 0, 1, 1)
-  &:focus 
-    outline: 0
-  &:hover 
-    opacity: .5
-  &--left 
-    left: 32px
-  &--right 
-    right: 32px
-
-// Carousel indicators
-.carousel__indicators 
-  display: flex
-  flex-direction: row
-  justify-content: center
-  margin-top: 20px
-  li 
-    &:nth-of-type(n + 2) 
-      margin-left: 9px 
-
-.carousel__indicator 
-  display: block
-  width: 24px
-  height: 3px
-  background-color: #111
-  cursor: pointer
-  opacity: .15
-  transition: opacity .15s cubic-bezier(.4, 0, 1, 1)
-
-  &:hover 
-    opacity: .5
-  
-
-  &--active 
-    &
-    &:hover 
-      opacity: .75
-.project-name
-  @include gothic()
-  @include respond-to('small')
-    font-weight: 500
-    font-size: 5vh
-    letter-spacing: 4px
-  @include respond-to('medium')
-    font-weight: 500
-    font-size: 6vh
-    letter-spacing: 8px
-.title
-  padding: 10vh 0vh 2vh 
+.project
+  .title
+    padding: 10vh 0vh 2vh 
+    .project-name
+      @include gothic()
+      @include respond-to('small')
+        font-weight: 500
+        font-size: 5vh
+        letter-spacing: 4px
+      @include respond-to('medium')
+        font-weight: 500
+        font-size: 6vh
+        letter-spacing: 8px
+  p
+    margin: 0vh 4vh 0vh 4vh
+  .carousel 
+    position: relative
+    .carousel__arrow 
+      position: absolute
+      top: 50%
+      display: block
+      cursor: pointer
+      width: 50px
+      height: 50px
+      opacity: .5
+      transform: translateY(-50%)
+      transition: opacity .15s cubic-bezier(.4, 0, 1, 1)
+      &:focus 
+        outline: 0
+      &:hover 
+        opacity: .5
+      &--left 
+        left: 32px
+        
+      &--right 
+        right: 32px
+    .carousel__slide 
+      margin-right: inherit
+      margin-left: inherit
+      display: none
+      width: 100%
+      text-align: center
+      &--active 
+        display: block
+    .mob-img
+      width: 30vh
+      height: 55vh
+    .desk-img
+      width: inherit
+      height: auto
+    .carousel__indicators 
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-top: 20px
+      li 
+        &:nth-of-type(n + 2) 
+          margin-left: 9px 
+      .carousel__indicator 
+        display: block
+        width: 24px
+        height: 3px
+        background-color: #111
+        cursor: pointer
+        opacity: .15
+        transition: opacity .15s cubic-bezier(.4, 0, 1, 1)
+        &:hover 
+          opacity: .5
+        &--active 
+          &
+          &:hover 
+            opacity: .75
 
   
 
