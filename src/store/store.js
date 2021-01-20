@@ -28,42 +28,37 @@ const Projects = [
             {
                 type: 'mobile',
                 name: 'landing',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/landing.png'
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611121567/Portfolio/donation-hub/landing.png'
             },
             {
                 type: 'mobile',
-                name: 'confirm',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/confirm.png'
+                name: 'location',
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611121567/Portfolio/donation-hub/location.png'
             },
             {
                 type: 'mobile',
                 name: 'items',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/items.png'
-            },
-            {
-                type: 'mobile',
-                name: 'landing',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/location.png'
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611121567/Portfolio/donation-hub/items.png'
             },
             {
                 type: 'mobile',
                 name: 'results',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/results.png'
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611121567/Portfolio/donation-hub/results.png'
             },
             {
                 type: 'mobile',
                 name: 'confirm',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/confirm.png'
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611121567/Portfolio/donation-hub/confirm.png'
             },
             {
                 type: 'mobile',
                 name: 'review',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/results.png'
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611121567/Portfolio/donation-hub/review.png'
             },
             {
                 type: 'mobile',
                 name: 'user',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Donation-Hub/user.png'
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611121568/Portfolio/donation-hub/user.png'
             }
         ]
     },
@@ -95,33 +90,28 @@ const Projects = [
         images: [
             {
                 type: 'mobile',
-                name: 'home',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/home.png'
-            },
-            {
-                type: 'mobile',
-                name: 'about',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/about.png'
+                name: 'kitchen',
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611122001/Portfolio/kitchen-hero/kitchen.png'
             },
             {
                 type: 'mobile',
                 name: 'expired',
-                url: 'https://storage.cloud.google.com/kay-the-web-dev/images/Kitchen-Hero/expired.png'
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611122001/Portfolio/kitchen-hero/expired.png'
             },
             {
                 type: 'mobile',
-                name: 'new',
-                url: 'https://storage.googleapis.com/kay-the-web-dev/images/Kitchen-Hero/new.png'
+                name: 'home',
+                url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611122001/Portfolio/kitchen-hero/home.png'
             }
         ]
     },
     {
         id : 3,
-        name : 'Petful',
+        name : 'FIFO Pet Adoptions',
         stack: 'full',
         text: {
             summary : 
-                `Petful is an adoption agency app that uses singly-linked lists to adopt out pets on a first-come-first-serve basis. 
+                `FIFO Pet Adoptions is an adoption agency app that uses singly-linked lists to adopt out pets on a first-come-first-serve basis. 
                 By signing up for adoption, a user will be added to a list and will then be able to adopt a pet based on the oldest pet available at the time.`
             ,
             role : 
@@ -142,17 +132,17 @@ const Projects = [
                 {
                     type: 'desktop',
                     name: 'adopt',
-                    url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/adopt.png'
+                    url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611122344/Portfolio/petful/adopt.png'
                 },
                 {
                     type: 'desktop',
                     name: 'landing',
-                    url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/landing.png'
+                    url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611122344/Portfolio/petful/landing.png'
                 },
                 {
                     type: 'desktop',
                     name: 'wait',
-                    url: 'https://storage.googleapis.com/kay-the-web-dev/images/FIFO-adoptions/wait.png'
+                    url: 'https://res.cloudinary.com/youngunderson/image/upload/v1611122344/Portfolio/petful/wait.png'
                 }
             ]
         },
