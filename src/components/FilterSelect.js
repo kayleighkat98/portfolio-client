@@ -68,7 +68,7 @@ class FilterSelect extends Component {
                 options={this.findOptions(this.props.filter, this.props.data)}
                 className="basic-multi-select"
                 classNamePrefix="select"
-                onChange={(e)=>{this.props.onChange(e)}}
+                onChange={(e)=>{this.props.onChange(e,this.props.filter)}}
             />
         );
     };

@@ -20,27 +20,37 @@ class Projects extends Component {
             filters: []
         };
     }
-    universalFilter = () =>{
-
-    }
-    onChangeFilter= (data)=>{
-        let filters = [...this.state.filters]
-        if(data){
-            data.map((obj, i)=>{
-                let index = filters.findIndex((entry => entry.key === obj.key))
-                if( index === -1){
-                    filters.push({'key':obj.key, 'value': [obj.value]})
-                }else{
-                    let filter = {...filters[index]}
-                    if (filter.value.findIndex((entry => entry === obj.value)) === -1){
+    onChangeFilter= (data, key)=>{
+        let filters = [...this.state.filters]//copy state
+        let index = filters.findIndex((entry => entry.key === key))//find index of match if exists
+        if(data){//if any filters are in place for this filter category
+            data.map((obj)=>{//iterate through changed data
+                if( index === -1){//if filter type does not yet exist
+                    filters.push({'key':obj.key, 'value': [obj.value]})//filter type created
+                }else{//otherwise filter type exists already and needs configuration
+                    let filter = {...filters[index]}//isolate filter data that exists
+                    if(data.length < filter.value.length){//if a deletion has been made
+                        let values = []
+                        for (let i = 0; i< filter.value.length; i++){
+                            if(filter.value[i]===obj.value){
+                                values.push(obj.value)
+                            }
+                        }
+                        filter.value= [...values]
+                        filters[index] = filter
+                    } else if (filter.value.findIndex((entry => entry === obj.value)) === -1){//if value does not exist in filter type values
                         filter.value = [...filter.value, obj.value]
                         filters[index] = filter
-                    }
+                    } 
                 }
             })
             this.setState({filters: [...filters]})
-        }else{
-            this.setState({filterValue: null})
+        }else{//if data is null
+            let deleteIndex = filters.findIndex((entry => entry.key === key))
+            if (deleteIndex !== -1){
+                filters.splice(deleteIndex, 1)
+                this.setState({filters: [...filters]})
+            }
         }
         return
     }
