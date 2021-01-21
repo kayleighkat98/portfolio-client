@@ -2,7 +2,8 @@ const Projects = [
     {
         id : 1,
         name : 'Donation-Hub',
-        stack: 'full',
+        team_size: 4,
+        stack: 'Full',
         text: {
             summary : 
                 `In most scenarios, people are willing to donate. However, it is not always clear what organizations need or how much of what they are seeking is needed. 
@@ -65,7 +66,8 @@ const Projects = [
     {
         id : 2,
         name : 'Kitchen Hero',
-        stack: 'full',
+        team_size: 1,
+        stack: 'Full',
         text: {
             summary : 
                 `Let's face it. We don't always remember what we have in our fridge. 
@@ -108,7 +110,8 @@ const Projects = [
     {
         id : 3,
         name : 'FIFO Pet Adoptions',
-        stack: 'full',
+        team_size: 2,
+        stack: 'Full',
         text: {
             summary : 
                 `FIFO Pet Adoptions is an adoption agency app that uses singly-linked lists to adopt out pets on a first-come-first-serve basis. 

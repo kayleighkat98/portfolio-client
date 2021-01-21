@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TechFilter from './TechFilter';
 import Project from './Project';
 import store  from '../store/store';
+import FilterSelect from './FilterSelect'
 const projects = store.Projects;
 const tech = store.Tech;
 class Projects extends Component {
@@ -9,26 +9,63 @@ class Projects extends Component {
         super(props);
 
         this.state = {
-            activeIndex: 0,
-            filterValue: null
+            filterValue: null,
+            filterSelectArray: [
+                {filter: 'name', data: projects, label: 'Name: '},
+                {filter: 'stack', data: projects, label: 'Stack: '},
+                {filter: 'team', data: projects, label: 'Team Size: '},
+                {filter: 'front', data: tech, label: 'Front-End Tech: '},
+                {filter: 'back', data: tech, label: 'Back-End Tech: '},
+            ],
+            filters: []
         };
     }
-    setFilter = (value) =>{
-        this.setState({filterValue: value});
+    universalFilter = () =>{
+
     }
-    undoFilter = () => {
-        this.setState({filterValue: null});
-    };
+    onChangeFilter= (data)=>{
+        let filters = [...this.state.filters]
+        if(data){
+            data.map((obj, i)=>{
+                let index = filters.findIndex((entry => entry.key === obj.key))
+                if( index === -1){
+                    filters.push({'key':obj.key, 'value': [obj.value]})
+                }else{
+                    let filter = {...filters[index]}
+                    if (filter.value.findIndex((entry => entry === obj.value)) === -1){
+                        filter.value = [...filter.value, obj.value]
+                        filters[index] = filter
+                    }
+                }
+            })
+            this.setState({filters: [...filters]})
+        }else{
+            this.setState({filterValue: null})
+        }
+        return
+    }
     render() {
         return(
             <div className='projects container'>
                 <div id='projects' className='anchor'/>
                 <h2>Projects</h2>
-                <TechFilter
-                    setFilter = {this.setFilter}
-                    undoFilter = {this.undoFilter}
-                />
-                <ul className="carousel_slides">
+                <div className='tech-filters'>
+                    <h3>Filter:</h3>
+                    {this.state.filterSelectArray.map((object, i)=>{
+                        return(
+                            <div className={object.filter+'Dropdown'} key={i}>
+                                <label>{object.label}</label>
+                                <FilterSelect
+                                    filter={object.filter}
+                                    data={object.data}
+                                    filters={this.state.filters}
+                                    onChange={this.onChangeFilter}
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
+                <ul>
                     {projects.map((project, i) => {
                         let techUsed = []
                         tech.map((item, i) => {
