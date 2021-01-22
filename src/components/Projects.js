@@ -63,41 +63,45 @@ class Projects extends Component {
         }
     }
     filterResults = (filters)=>{
-        let results = [...this.state.results] 
-        for (let i = 0; i< filters.length; i++){// loop through provided filters
-            let filter = filters[i]
-            let key = filter.key
-            let value = filter.value
-            for (let j = 0; j< projects.length; j++){// loop through projects
-                let project=projects[j] 
-                let index = results.findIndex((x => x === project))
-                if (index !== -1){//if project is already in results
-                    for (const property in project){// loop through project groups
-                        if (key === property){ // if filter affects this property
-                            if (typeof project[property] === 'string'){//determine if property must be removed
-                                if (!value.includes(project[property].toLowerCase())){
-                                    results = results.filter(value => value !== project)
-                                }
-                            }else{
-                                if (!value.includes(project[property])){//remove project to results
-                                    results = results.filter(value => value !== project)
-                                }
-                            }
-                        }  
-                    }
-                }else{
-                    for (const property in project){// loop through project groups
-                        if (key === property){// if filter affects this property
-                            if (typeof project[property] === 'string'){//add project to results
-                                if (value.includes(project[property].toLowerCase())){
-                                    results.push(project)
-                                }
-                            }else{
-                                if (value.includes(project[property])){//add project to results
-                                    results.push(project)
+        let results = [...projects]
+        if (filters.length === 0){//show all
+            return this.setState({results: [...results]})
+        }else{
+            for (let i = 0; i< filters.length; i++){// loop through provided filters
+                let filter = filters[i]
+                let key = filter.key
+                let value = filter.value
+                for (let j = 0; j< projects.length; j++){// loop through projects
+                    let project=projects[j]
+                    let index = results.findIndex((x => x === project))
+                    if (index !== -1){//if project is already in results
+                        for (const property in project){// loop through project groups
+                            if (key === property){ // if filter affects this property
+                                if (typeof project[property] === 'string'){//determine if property must be removed
+                                    if (!value.includes(project[property].toLowerCase())){//remove project from results
+                                        results = results.filter(value => value !== project)
+                                    }
+                                }else{
+                                    if (!value.includes(project[property])){//remove project from results
+                                        results = results.filter(value => value !== project)
+                                    }
                                 }
                             }
-                        }  
+                        }
+                    }else{
+                        for (const property in project){// loop through project groups
+                            if (key === property){// if filter affects this property
+                                if (typeof project[property] === 'string'){//add project to results
+                                    if (value.includes(project[property].toLowerCase())){
+                                        results.push(project)
+                                    }
+                                }else{
+                                    if (value.includes(project[property])){//add project to results
+                                        results.push(project)
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
