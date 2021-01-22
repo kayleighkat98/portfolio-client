@@ -2,7 +2,7 @@ const Projects = [
     {
         id : 1,
         name : 'Donation-Hub',
-        team_size: 4,
+        team: 4,
         stack: 'Full',
         text: {
             summary : 
@@ -66,7 +66,7 @@ const Projects = [
     {
         id : 2,
         name : 'Kitchen Hero',
-        team_size: 1,
+        team: 1,
         stack: 'Full',
         text: {
             summary : 
@@ -110,7 +110,7 @@ const Projects = [
     {
         id : 3,
         name : 'FIFO Pet Adoptions',
-        team_size: 2,
+        team: 2,
         stack: 'Full',
         text: {
             summary : 

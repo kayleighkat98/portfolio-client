@@ -37,7 +37,7 @@ class FilterSelect extends Component {
             let tempTypes = [];
             let types = [];
             data.map((project)=>{
-                tempTypes.push(project.team_size);
+                tempTypes.push(project.team);
             })
             tempTypes.sort();
             for (let i =0; i< tempTypes.length; i++){

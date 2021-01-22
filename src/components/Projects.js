@@ -17,7 +17,8 @@ class Projects extends Component {
                 {filter: 'front', data: tech, label: 'Front-End Tech: '},
                 {filter: 'back', data: tech, label: 'Back-End Tech: '},
             ],
-            filters: []
+            filters: [],
+            results: [...projects]
         };
     }
     onChangeFilter= (data, key)=>{
@@ -26,13 +27,17 @@ class Projects extends Component {
         if(data){//if any filters are in place for this filter category
             data.map((obj)=>{//iterate through changed data
                 if( index === -1){//if filter type does not yet exist
-                    filters.push({'key':obj.key, 'value': [obj.value]})//filter type created
+                    if (typeof obj.value === 'string'){
+                        filters.push({'key':obj.key, 'value': [obj.value.toLowerCase()]})//string filter type created
+                    }else{
+                        filters.push({'key':obj.key, 'value': [obj.value]})//filter type created
+                    }
                 }else{//otherwise filter type exists already and needs configuration
                     let filter = {...filters[index]}//isolate filter data that exists
+                    let values = []
                     if(data.length < filter.value.length){//if a deletion has been made
-                        let values = []
                         for (let i = 0; i< filter.value.length; i++){
-                            if(filter.value[i]===obj.value){
+                            if(filter.value[i]===obj.value){//find remaining values
                                 values.push(obj.value)
                             }
                         }
@@ -41,18 +46,63 @@ class Projects extends Component {
                     } else if (filter.value.findIndex((entry => entry === obj.value)) === -1){//if value does not exist in filter type values
                         filter.value = [...filter.value, obj.value]
                         filters[index] = filter
-                    } 
+                    }
                 }
             })
-            this.setState({filters: [...filters]})
+            this.setState({filters: [...filters]}, function(){
+                return this.filterResults(filters); 
+            })
         }else{//if data is null
             let deleteIndex = filters.findIndex((entry => entry.key === key))
             if (deleteIndex !== -1){
                 filters.splice(deleteIndex, 1)
-                this.setState({filters: [...filters]})
+                this.setState({filters: [...filters]}, function(){
+                    return this.filterResults(filters);
+                })
             }
         }
-        return
+    }
+    filterResults = (filters)=>{
+        let results = [...this.state.results] 
+        for (let i = 0; i< filters.length; i++){// loop through provided filters
+            let filter = filters[i]
+            let key = filter.key
+            let value = filter.value
+            for (let j = 0; j< projects.length; j++){// loop through projects
+                let project=projects[j] 
+                let index = results.findIndex((x => x === project))
+                if (index !== -1){//if project is already in results
+                    for (const property in project){// loop through project groups
+                        if (key === property){ // if filter affects this property
+                            if (typeof project[property] === 'string'){//determine if property must be removed
+                                if (!value.includes(project[property].toLowerCase())){
+                                    results = results.filter(value => value !== project)
+                                }
+                            }else{
+                                if (!value.includes(project[property])){//remove project to results
+                                    results = results.filter(value => value !== project)
+                                }
+                            }
+                        }  
+                    }
+                }else{
+                    for (const property in project){// loop through project groups
+                        if (key === property){// if filter affects this property
+                            if (typeof project[property] === 'string'){//add project to results
+                                if (value.includes(project[property].toLowerCase())){
+                                    results.push(project)
+                                }
+                            }else{
+                                if (value.includes(project[property])){//add project to results
+                                    results.push(project)
+                                }
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+        return this.setState({results: [...results]})
     }
     render() {
         return(
@@ -76,7 +126,7 @@ class Projects extends Component {
                     })}
                 </div>
                 <ul>
-                    {projects.map((project, i) => {
+                    {this.state.results.map((project, i) => {
                         let techUsed = []
                         tech.map((item, i) => {
                             if (item.projects.includes(project.id)){
@@ -88,29 +138,17 @@ class Projects extends Component {
                             }
                             return techUsed
                         });
-                        if (this.state.filterValue === null){
-                            return(
-                                <Project
-                                    key = {i}
-                                    index = {i}
-                                    project = {project}
-                                    techUsed = {techUsed}
-                                />
-                            )
-                        }else{
-                            if ( this.state.filterValue.includes(project.id)){
-                                return(
-                                    <Project
-                                    key = {i}
-                                    index = {i}
-                                    project = {project}
-                                    techUsed = {techUsed}
-                                    />
-                                )
-                            } else {
-                                return ('')
-                            };
-                        };
+                        
+                        return(
+                            <Project
+                                key = {i}
+                                index = {i}
+                                project = {project}
+                                techUsed = {techUsed}
+                            />
+                        )
+                        
+                        
                     })}
                 </ul>
 
