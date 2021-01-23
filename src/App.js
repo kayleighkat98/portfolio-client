@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './routes/Home';
 import NotFound from './routes/NotFound';
+import Login from './routes/Login';
 import './styles/dist/App.css';
 
 class App extends Component {
@@ -27,6 +28,11 @@ class App extends Component {
               exact
               path = '/'
               component = {Home}
+            />
+            <Route
+              exact
+              path = '/admin'
+              component = {Login}
             />
             <Route
               component={NotFound}

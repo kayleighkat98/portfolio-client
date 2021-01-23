@@ -14,6 +14,8 @@ class Projects extends Component {
                 {filter: 'name', data: projects, label: 'Name: '},
                 {filter: 'stack', data: projects, label: 'Stack: '},
                 {filter: 'team', data: projects, label: 'Team Size: '},
+                {filter: 'front', data: tech, label: 'Front-End Tech: '},
+                {filter: 'back', data: tech, label: 'Back-End Tech: '},
             ],
             filters: [],
             results: [...projects]
