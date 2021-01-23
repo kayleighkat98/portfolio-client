@@ -5,6 +5,9 @@ import Footer from './components/Footer';
 import Home from './routes/Home';
 import NotFound from './routes/NotFound';
 import Login from './routes/Login';
+import PrivateRoute from './components/PrivateRoute';
+import PublicOnlyRoute from './components/PublicOnlyRoute';
+import CreateProject from './components/CreateProject';
 import './styles/dist/App.css';
 
 class App extends Component {
@@ -24,14 +27,17 @@ class App extends Component {
           {hasError && (<p>There was an error! Oh no!</p>)}
           {/*  */}
           <Switch>
-            <Route
+            <PrivateRoute
+              path={'/create'}
+              component={CreateProject}
+            />
+            <PublicOnlyRoute
               exact
-              path = '/'
+              path = {'/'}
               component = {Home}
             />
             <Route
-              exact
-              path = '/admin'
+              path = {'/admin'}
               component = {Login}
             />
             <Route
