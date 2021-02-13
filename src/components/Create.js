@@ -1,20 +1,37 @@
 import React, { Component } from 'react'
-import CreatableSelect from 'react-select/creatable';
-class CreateProject extends Component {
+import CreatableSelect from 'react-select/creatable'
+import '../styles/dist/create.css'
+import ProjectsContext from '../contexts/projects-context'
+import ReactLoading from 'react-loading'
+class Create extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            
+            names: []
         };
     }
-
+    static contextType = ProjectsContext;
+    findOptions(option){
+        let options = []
+        if (this.context.projects){
+            this.context.projects.map( (project, i) =>{
+                Object.keys(project).forEach(field =>{
+                    if (field === option){
+                        options.push({'key': i, value: project[field], label: project[field]})
+                    }
+                })
+            })
+            return (options)
+        }
+    }
     render() {
         return(
-            <div className='login'>
+            <div className='create'>
                 <h1>New project</h1>
+                {!this.context.projects? <ReactLoading className="load" type={'spinningBubbles'} color='#181026'/>: null}
                 <label id='name'>Name: </label>
-                <CreatableSelect/>
+                <CreatableSelect isClearable options={this.findOptions('name')}/>
                 <label id='team'>Team Size: </label>
                 <CreatableSelect/>
                 <label id='stack'>Stack: </label>
@@ -47,9 +64,11 @@ class CreateProject extends Component {
                     <label id='stack'>Stack: </label>
                     <CreatableSelect/>
                 </section>
+                <button title='Submit' type='submit'>Submit</button>
             </div>
         );
+        
     }
 }
 
-export default CreateProject
+export default Create

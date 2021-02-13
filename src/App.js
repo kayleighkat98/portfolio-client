@@ -7,7 +7,7 @@ import NotFound from './routes/NotFound';
 import Login from './routes/Login';
 import PrivateRoute from './components/PrivateRoute';
 import PublicOnlyRoute from './components/PublicOnlyRoute';
-import CreateProject from './components/CreateProject';
+import Create from './components/Create';
 import './styles/dist/App.css';
 
 class App extends Component {
@@ -29,7 +29,7 @@ class App extends Component {
           <Switch>
             <PrivateRoute
               path={'/create'}
-              component={CreateProject}
+              component={Create}
             />
             <PublicOnlyRoute
               exact

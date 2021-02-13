@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Project from './Project';
 import store  from '../store/store';
-import FilterSelect from './FilterSelect'
+import FilterSelect from './FilterSelect';
+import ProjectsContext from '../contexts/projects-context';
 const projects = store.Projects;
 const tech = store.Tech;
 class Projects extends Component {
@@ -21,6 +22,7 @@ class Projects extends Component {
             results: [...projects]
         };
     }
+    static contextType = ProjectsContext;
     onChangeFilter= (data, key)=>{
         let filters = [...this.state.filters]//copy state
         let index = filters.findIndex((entry => entry.key === key))//find index of match if exists
@@ -109,6 +111,7 @@ class Projects extends Component {
         return this.setState({results: [...results]})
     }
     render() {
+
         return(
             <div className='projects container'>
                 <div id='projects' className='anchor'/>
